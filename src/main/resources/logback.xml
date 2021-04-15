@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="com.github.prchen.mybatis_stmt_demo.interceptor.LoggerInterceptor"/>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>
+                <![CDATA[%m%n]]>
+            </pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <logger name="com.github.prchen.mybatis_stmt_demo" level="DEBUG"/>
+
+    <root level="WARN">
+        <appender-ref ref="Console"/>
+    </root>
+
+</configuration>
